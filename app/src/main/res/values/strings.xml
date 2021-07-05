@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Purple Guide</string>
+
+    <string name="APP_ID">myappID</string>
+    <string name="CLIENT_KEY">WziP5qdIUX6A</string>
+    <string name="SERVER_URL">http://127.0.0.1/parse</string>
+
+</resources>
