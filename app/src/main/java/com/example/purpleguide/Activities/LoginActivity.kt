@@ -2,7 +2,6 @@ package com.example.purpleguide.Activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.purpleguide.R
 import com.example.purpleguide.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {

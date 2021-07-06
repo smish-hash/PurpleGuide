@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "413865327846",
+    "project_id": "purple-guide-c8bd7",
+    "storage_bucket": "purple-guide-c8bd7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413865327846:android:f22eabc6820fed33824f27",
+        "android_client_info": {
+          "package_name": "com.example.purpleguide"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "413865327846-tbmo7o5kdvgcglulqf50344p08t8miq6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.purpleguide",
+            "certificate_hash": "e2e7c2555748797dc5f7eb6026e4ea53ca7826a3"
+          }
+        },
+        {
+          "client_id": "413865327846-mnihgrr0norob6juonl7t3p6ugi4h972.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoQ4gmiWIqkU8NE0S1teOvEqS6ZYWfEHE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "413865327846-mnihgrr0norob6juonl7t3p6ugi4h972.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
