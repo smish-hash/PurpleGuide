@@ -6,6 +6,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.purpleguide.Activities.AddPlaceActivity
 import com.example.purpleguide.Activities.LoginActivity
 import com.example.purpleguide.Adapters.PlacesAdapter
@@ -17,6 +18,7 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
 class MainActivity : AppCompatActivity() {
@@ -42,7 +44,7 @@ class MainActivity : AppCompatActivity() {
 
 
         auth = FirebaseAuth.getInstance()
-        firestore = FirebaseFirestore.getInstance()
+        firestore = Firebase.firestore
         userID = auth.uid.toString()
 
         collectionReference = firestore.collection("Places")
@@ -58,18 +60,21 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initData() {
-        var query: Query = collectionReference.orderBy("placeName")
+        val query = collectionReference.orderBy("placeName")
 
         options = FirestoreRecyclerOptions.Builder<Places>()
             .setQuery(query, Places::class.java)
+            .setLifecycleOwner(this)
             .build()
 
         initRecycler()
     }
 
     private fun initRecycler() {
+        binding.placesRecyclerView.layoutManager = LinearLayoutManager(this)
         adapter = PlacesAdapter(options, this)
         binding.placesRecyclerView.adapter = adapter
+        adapter.startListening()
     }
 
     override fun onStart() {

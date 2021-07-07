@@ -67,6 +67,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:imeOptions="actionNext"
+                    android:lines="1"
                     android:inputType="textCapSentences|textAutoCorrect|textAutoComplete|textPersonName"
                     android:maxLines="1" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -87,7 +88,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="start"
-                    android:inputType="textCapSentences|textAutoCorrect|textAutoComplete|textPersonName"
+                    android:inputType="textMultiLine|textCapSentences|textAutoCorrect|textAutoComplete|textPersonName"
                     android:maxLength="200"
                     android:scrollbars="vertical" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -109,6 +110,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:imeOptions="actionNext"
+                    android:lines="1"
                     android:inputType="textCapSentences|textAutoCorrect|textAutoComplete|textPersonName" />
             </com.google.android.material.textfield.TextInputLayout>
 
